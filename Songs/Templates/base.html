@@ -1,0 +1,16 @@
+<center>
+   {% if request.user.is_authenticated %}
+    <a href="{% url 'Logout' %}"><button>Logout</button></a><br>
+       {{ request.user.username }}
+    {% else %}
+    <a href="{% url 'Login' %}"><button>Login</button></a>
+   {% endif %}
+
+{% block body %}
+
+
+
+
+{% endblock %}
+<br><br><br>
+<h3>Developed by: HARSHIT</h3>

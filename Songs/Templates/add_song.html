@@ -1,0 +1,12 @@
+<center>
+    add new song
+    <form method="post" action="">
+        {% csrf_token %}
+        Song title:<input type="text" name="title" placeholder="song title"/><br><br>
+        song duration:<input type="text" name="duration" placeholder="song duration"/><br><br>
+        song poster:<input type="text" name="poster" placeholder="song poster"/><br><br>
+        song audio:<input type="text" name="audio" placeholder="song audio"/><br><br>
+        song video:<input type="text" name="video" placeholder="song video"/><br><br>
+
+        <input type="submit" value="Add">
+    </form>

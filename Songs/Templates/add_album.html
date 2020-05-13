@@ -1,0 +1,11 @@
+<center>
+    <h1>Add New Album</h1>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+       Album Name: {{ form.name }}<br><br>
+       Album Artists: {{ form.artists }} <br><br>
+       Album image: {{ form.image }} <br><br>
+       Album Company: {{ form.company }} <br><br>
+        <input type="submit" value="Add">
+    </form>
+</center>

@@ -1,0 +1,23 @@
+{% extends "movie/base.html" %}
+{% load static %}
+{% block body %}
+<center>
+    <h1 style="margin-top: 5%"><br>Register Your Account</h1><br>
+    <form method="post" action="">
+        {% csrf_token %}
+       {% if error %} <p style="color: red">This Username Already Exist</p>{% endif %}
+
+        Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" placeholder="Your Name" /> <br><br>
+
+        {% if not error %}Username: <input type="text" name="un" placeholder="Your Username" /> <br><br>
+        {% else %}Username: <input style="border-color: red;" type="text" name="un" placeholder="Your Username" /> <br><br>
+        {% endif %}
+        Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" placeholder="Your Email" /> <br><br>
+        Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="number" max="9999999999" min="5000000000" name="number" placeholder="Your number" /> <br><br>
+       Password: &nbsp;&nbsp;&nbsp;&nbsp<input type="password" name="ps" placeholder="Password" /> <br><br>
+        <input type="submit" value="Register">
+    </form>
+    <br>
+    <a href="{% url 'MyMovie:login' %}">Login</a>
+</center>
+{% endblock %}

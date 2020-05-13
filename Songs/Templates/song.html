@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>HARSHIT'S HOME</title>
+<style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+        .title h1{
+    color: #fff;
+    font-size: 70px;
+}
+    .image img{
+        margin-bottom: -40px ;
+        margin-top: -50px ;
+        width: 230px;
+        height: 300px;
+            }
+    .data{
+        margin-top: 50px;
+    }
+
+    body{
+        background-color: black;
+        background-size: cover;
+
+        background-position: center;
+        background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.725)),url(https://media.giphy.com/media/SAwudAE7lfyuY/giphy.gif);
+        color:white;
+        font-family: "Google Sans";
+    }
+    th{
+        padding: 10px 30px 10px 30px;
+        background-color: #575354;
+    }
+    .tbl{
+        border-radius: 100px;
+    }
+
+.button {
+    background-color: grey;
+    border-radius: 20px;
+    width:17%;
+    padding:10px 20px 10px 20px;
+
+}
+    .hh{
+        text-decoration: none;
+    }
+        </style>
+    </head>
+    <body vlink="#ff7f50">
+    <center>
+    <br>
+
+    <div class="title">
+            {% if error %}
+<h1 style="color:red; font-family:'Century Gothic'">
+    ⚠ <br></h1><h2 style="color:red; font-family:'Century Gothic'">YOU HAVE ENTERED WRONG ID NUMBER
+</h2>
+        {% else %}</div>
+
+        <div class="button">
+            H Music ▶ <a href="{% url 'home' %}" class="hh"> Albums </a> ▶
+
+        </div><br>
+<div class="image">
+<br><br><br><img src ="{{ data.poster }}">
+</div>
+<div class="data">aaaaa
+<h1>{{ data.title }}</h1>
+Duration - {{ data.duration }}<br>
+Artists - {{ data.artists }}<br>
+
+</div>
+<br>
+                <audio src="{{ data.audio }}" controls autoplay>
+<p>play in this window</p>
+</audio>
+                <br>
+                <a href="{{ data.video }}" target="_blank"> or play on youtube </a>
+       {% endif %}
+    </body>
+</html>

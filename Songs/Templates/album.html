@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+    <head>
+<title>HARSHIT'S HOME</title>
+<style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+        .title h1{
+    color: #fff;
+    font-size: 70px;
+}
+    .image img{
+        margin-bottom: -40px ;
+        margin-top: -50px ;
+        width: 230px;
+        height: 300px;
+            }
+    .data{
+        margin-top: 50px;
+    }
+
+    body{
+        background-color: black;
+        color:white;
+        font-family: "Google Sans";
+    }
+    th{
+        padding: 10px 30px 10px 30px;
+        background-color: #575354;
+    }
+    .tbl{
+        border-radius: 100px;
+    }
+
+.button {
+    background-color: grey;
+    border-radius: 20px;
+    width:17%;
+    padding:10px 20px 10px 20px;
+
+}
+    .hh{
+        text-decoration: none;
+    }
+        </style>
+    </head>
+    <body vlink="#ff7f50">
+    <center>
+    <br>
+
+    <div class="title">
+            {% if error %}
+<h1 style="color:red; font-family:'Century Gothic'">
+    ⚠ <br></h1><h2 style="color:red; font-family:'Century Gothic'">YOU HAVE ENTERED WRONG ID NUMBER
+</h2>
+        {% else %}</div>
+
+
+
+
+
+        <div class="button">
+            H Music ▶ <a href="{% url 'home' %}" class="hh"> Albums </a>▶ {{ data.name }}
+        </div><br>
+<div class="image">
+<br><br><br><img src ="{{ data.image }}">
+</div>
+<div class="data">
+<h1>{{ data.name }}</h1>
+Released on - {{ data.date }}<br>
+Artists - {{ data.artists }}<br>
+By - {{ data.company }}<br>
+</div>
+<br>
+    <div class="tbl">
+<table border="0.5px">
+<tr>
+    <th>#</th>
+    <th>SONG</th>
+    <th>DURATION</th>
+</tr>
+
+    {% for i in data.song_set.all %}
+        <tr>
+        <th>{{ forloop.counter }}</th>
+            <th><a href="{% url "songs" i.id %}"> {{ i.title }}</a></th>
+        <th>{{ i.duration }}</th>
+
+</tr>
+    {% endfor %}
+
+</table>
+    </div>
+
+<center> <a href="{% url "add_song" data.id %}"><button type="button">Add song</button></a>
+
+
+            {% endif %}
+
+    </body>
+
+</html>
+{% endblock %}

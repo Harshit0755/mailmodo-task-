@@ -1,0 +1,89 @@
+<style>
+     .button1,.button2{
+        margin-top: 5%;
+        position: absolute;
+        border: 1px solid white;
+        padding: 0px 0px 0px 0px;
+        color:#fff;
+        text-decoration: none;
+        font-size: 8px;
+        background-color: black;
+        border-radius: 10px;
+        transition: 0.5s ease;
+        color: rgba(240, 248, 255, 0);
+        }
+        /*.button1{
+            background-color: rgba(0, 0, 0, 0.51);
+            background-image: url("https://i.ibb.co/4VpHmCw/kabir.jpg");
+        }
+        .button2{
+            background-color: rgba(0, 0, 0, 0.51);
+            background-image: url("https://i.ibb.co/7y8QMhj/war.jpg");
+        } */
+        .button1:hover{
+        box-shadow: 10px 10px 5px grey;
+        transition: 0.5s ease;
+        }
+        .button2:hover{
+        box-shadow: 10px 10px 5px grey;
+        transition: 0.5s ease;
+        }
+        .button1{
+            margin-left: -15%;
+            transform: scale(1);
+        }
+        .button2{
+            margin-left: -10%;
+            transform: scale(1);
+        }
+        .color{
+            color:rgba(0, 255, 255, 0);
+        }
+        .list{
+            text-decoration: none;
+            color:rgba(0, 255, 255, 0);
+        }
+        li{
+            display: inline-block;
+        }
+    body{
+        margin-top: 10%;
+        background-color: black;
+       background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.25)),url(https://i.pinimg.com/originals/0a/26/bc/0a26bce2905a0476269f604ce0a8e5ce.png);
+        height: 10vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color:white;
+        font-family: "Google Sans";
+    }
+    h1{
+        font-size: 40px;
+    }
+    .color{
+        opacity: 0;
+    }
+</style>
+<body vlink=black alink="black">
+<center>
+
+<p style="font-size:30px;color: darkorange;font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif">
+    <h2>WELCOME TO</h2><h1>H-MUSIC PLAYER</h1>
+</p>
+<!--
+    <center><br><br>
+             <a href="#" class="button1">WATCH VIDEO</a>
+             <a href="#" class="button2">LEARN MORE</a>
+    </center> -->
+ALBUMS</center><br><br>
+<center>
+<h4>
+    {% for i in data %}
+        <li> <div class="list"><a href ="{% url 'albums' i.id %}"><img src = "{{ i.image }}"></div><div class="color">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+   </a>
+    </li>
+    {% endfor %}
+<br><br>
+   <center> <a href="{% url 'Login' %}"><button type="button">Add album</button></a>
+</h4>
+</body>

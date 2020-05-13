@@ -1,0 +1,11 @@
+<center>
+    login to add new song
+    <form method="post" action="">
+        {% csrf_token %}
+        username:<input type="text" name="un" placeholder="username"/><br><br>
+        password:<input type="password" name="ps" placeholder="password"/><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+    <br>
+    <a href="{% url "register" %}"> Register here</a>

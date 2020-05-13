@@ -1,0 +1,4 @@
+{% for i in s1 %}
+                .st_seat_lay_row #c{{ forloop.counter }}[type="checkbox"] + label:before {
+                    content:"{{ forloop.counter }}";
+                }
