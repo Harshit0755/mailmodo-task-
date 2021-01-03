@@ -722,12 +722,13 @@
 		width:100%;
 	}
 }
-@media (max-width: 670px){
-	.prs_es_tabs_wrapper .nav-pills > li{
-		float:none;
+@media (max-width: 670px) {
+	.prs_es_tabs_wrapper .nav-pills > li {
+		float: none;
 	}
-	.prs_es_tabs_wrapper .nav-pills > li + li{
-		margin-left:0;
-		margin-top:10px;
+
+	.prs_es_tabs_wrapper .nav-pills > li + li {
+		margin-left: 0;
+		margin-top: 10px;
 	}
-}
+}}

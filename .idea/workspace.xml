@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08cc9b7e-4c4a-41db-8d20-9f737b469229" name="Default Changelist" comment="" />
+    <list default="true" id="08cc9b7e-4c4a-41db-8d20-9f737b469229" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie/Templates/movie/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Movie/Templates/movie/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie/static/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/Movie/static/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +28,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="Music/invalid/Django" />
+    </ignored-facets>
+  </component>
   <component name="ProjectId" id="1VvFbOnH7VQwEjnAU7caaGUgv3L" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,17 +48,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Appy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Movie/Templates/movie" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\Music\Movie\Templates\movie" />
       <recent name="C:\Users\harshit\Desktop\Music\Movie\Templates\movie" />
       <recent name="C:\Users\harshit\Desktop\Music\Movie\static" />
       <recent name="C:\Users\harshit\Desktop\Music\Movie\static\js" />
       <recent name="C:\Users\harshit\Desktop\Music\Movie\static\css" />
-      <recent name="C:\Users\harshit\Desktop\Music\Movie\Templates\home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\harshit\Desktop\Music\Music" />
@@ -201,6 +220,61 @@
       <workItem from="1588563495708" duration="1733000" />
       <workItem from="1588565354853" duration="1723000" />
       <workItem from="1588567131104" duration="1374000" />
+      <workItem from="1589555374887" duration="702000" />
+      <workItem from="1589564380378" duration="1697000" />
+      <workItem from="1589566123961" duration="1439000" />
+      <workItem from="1590072057987" duration="1180000" />
+      <workItem from="1590073658773" duration="692000" />
+      <workItem from="1591177407708" duration="131000" />
+      <workItem from="1591178347378" duration="739000" />
+      <workItem from="1594148158274" duration="1317000" />
+      <workItem from="1594149592962" duration="1679000" />
+      <workItem from="1594151411565" duration="1458000" />
+      <workItem from="1594153242932" duration="1265000" />
+      <workItem from="1594203287112" duration="375000" />
+      <workItem from="1594203706642" duration="1049000" />
+      <workItem from="1594205607598" duration="731000" />
+      <workItem from="1594280960019" duration="1690000" />
+      <workItem from="1594282738736" duration="1775000" />
+      <workItem from="1594284651577" duration="1803000" />
+      <workItem from="1594286514211" duration="1195000" />
+      <workItem from="1594293586053" duration="1719000" />
+      <workItem from="1594295374121" duration="242000" />
+      <workItem from="1594310700427" duration="56000" />
+      <workItem from="1594310792442" duration="1666000" />
+      <workItem from="1594312622083" duration="197000" />
+      <workItem from="1594313096278" duration="1304000" />
+      <workItem from="1594314442335" duration="1781000" />
+      <workItem from="1594316262928" duration="1305000" />
+      <workItem from="1594318077581" duration="1779000" />
+      <workItem from="1594319899301" duration="632000" />
+      <workItem from="1594361349829" duration="590000" />
+      <workItem from="1594363113338" duration="599000" />
+      <workItem from="1594364317362" duration="598000" />
+      <workItem from="1594367740107" duration="636000" />
+      <workItem from="1594369590018" duration="1771000" />
+      <workItem from="1594371398954" duration="998000" />
+      <workItem from="1594373600214" duration="29000" />
+      <workItem from="1594570289727" duration="1019000" />
+      <workItem from="1594572664801" duration="1357000" />
+      <workItem from="1594574434654" duration="753000" />
+      <workItem from="1594576247979" duration="750000" />
+      <workItem from="1594578058570" duration="1306000" />
+      <workItem from="1594641344628" duration="994000" />
+      <workItem from="1594800373922" duration="597000" />
+      <workItem from="1594903467750" duration="9000" />
+      <workItem from="1594927382088" duration="883000" />
+      <workItem from="1594929198919" duration="687000" />
+      <workItem from="1594931849487" duration="598000" />
+      <workItem from="1594977782182" duration="622000" />
+      <workItem from="1594979656046" duration="871000" />
+      <workItem from="1594981473725" duration="738000" />
+      <workItem from="1595058620299" duration="626000" />
+      <workItem from="1595066294072" duration="603000" />
+      <workItem from="1595177822030" duration="578000" />
+      <workItem from="1595328814738" duration="544000" />
+      <workItem from="1609511842846" duration="3407000" />
+      <workItem from="1609522810753" duration="1733000" />
     </task>
     <servers />
   </component>
@@ -208,25 +282,32 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="26" key="#Inspections" timestamp="1578242616455">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="420" y="249" key="FileChooserDialogImpl" timestamp="1609652681482">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="275" y="26" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1578242616455" />
-    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579009332599">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="420" y="249" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1609652681482" />
+    <state x="143" y="137" key="SettingsEditor" timestamp="1609652686236">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579009332599" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1584861078029">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="143" y="137" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1609652686236" />
+    <state x="348" y="319" key="com.intellij.ide.util.TipDialog" timestamp="1609575419955">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584861078029" />
-    <state x="193" y="10" key="SettingsEditor" timestamp="1578126078096">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="348" y="319" key="com.intellij.ide.util.TipDialog/0.0.1280.984@0.0.1280.984" timestamp="1609575419955" />
+    <state x="451" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609652703640">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="193" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578126078096" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580353770127">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580353770127" />
+    <state x="451" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.984@0.0.1280.984" timestamp="1609652703640" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Movie/views.py</url>
+          <line>268</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

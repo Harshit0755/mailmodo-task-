@@ -18,8 +18,9 @@ import json
 
 URL = 'https://www.sms4india.com/api/v1/sendCampaign'
 
-headers = { "X-Api-Key": "85fa69f496dec0b77cf2f538b3ef5f8e",
-            "X-Auth-Token": "99cc1530aad3f42e6fcf244ee1c9d644"}
+headers = {
+            "Bearer Token":"tTU3gFVUdP",
+"email": "arieg@gsmi.com"}
 
 
 
@@ -237,7 +238,7 @@ def MakePayment(request):
         'amount': str(Rs),
         'buyer_name': request.user.username,
         'email': request.user.email,
-        'phone': request.user.userdetails_set.first().number,
+        'phone': request.user.movie_users_set.first().number,
         'redirect_url': 'http://127.0.0.1:8000/PayCheck/{}/'.format(request.user.username),
         'send_email': 'True',
         'send_sms': 'True',
@@ -317,6 +318,120 @@ def PayChack(request, Usr):
         # print response if you want
         print(response.text)
 
+from requests.structures import CaseInsensitiveDict
+
+
+def apit(request):
+
+
+    url = "https://f0ztti2nsk.execute-api.ap-south-1.amazonaws.com/v1/consignment/fetch"
+
+    headers = CaseInsensitiveDict()
+    headers["Authorization"] = "Bearer tTU3gFVUdP"
+    headers["Content-Type"] = "application/json"
+
+    data = """
+    {
+        "email": "mayankmittal@intugine.com"
+    }
+    """
+
+    resp = requests.post(url, headers=headers, data=data)
+    m = []
+    t=[]
+    d=resp.text
+    obj = json.loads(resp.text)
+    Url = obj[0]
+    movies1=obj
+    b=False
+   # print(obj[1]['current_status'])
+    for i in obj:
+ #      if(i["current_status"]=="Delivered"):
+  #         b=True
+   #        print(i["current_status"])
+        m.append(i)
+    #print(m)
 
 
 
+    for p in m:
+        #print(p)
+        y=p["awbno"]
+        if (y == "68816235"):
+            t.append(p)
+            #print(t)
+            break
+
+ #   print(m[0])
+    w=m[0]["scan"]
+           #m[i.keys()].append(i["current_status"])
+     #  else:
+      #     print(1)
+
+
+    return render(request, "movie/appi.html", {"obj":obj, "movies1":movies1, "t":t[0]["scan"],"m":m})
+
+
+
+def details(request, m_id):
+    url = "https://f0ztti2nsk.execute-api.ap-south-1.amazonaws.com/v1/consignment/fetch"
+
+    headers = CaseInsensitiveDict()
+    headers["Authorization"] = "Bearer tTU3gFVUdP"
+    headers["Content-Type"] = "application/json"
+
+    data = """
+        {
+            "email": "mayankmittal@intugine.com"
+        }
+        """
+
+    resp = requests.post(url, headers=headers, data=data)
+
+    a=[]
+    n_id="h"
+    d = resp.text
+    obj = json.loads(resp.text)
+    Url = obj[0]
+    m = []
+    t = []
+    if(m_id==0):
+        n_id="Delivered"
+    if(m_id == 1):
+        n_id = "In Transit"
+    if(m_id == 2):
+        n_id = "Out for Delivery"
+    if (m_id == 3):
+        n_id = "Undelivered"
+    if (m_id == 4):
+        n_id = "No Information Yet"
+    #print(n_id)
+
+    for i in obj:
+       a.append(i)
+       if(i["current_status"]==n_id):
+           b=True
+           #print(i["current_status"])
+           m.append(i)
+           #m[i.keys()].append(i["current_status"])
+    count=0
+    for i in m:
+        count=count+1
+
+    for p in a:
+        #print(p)
+        y=p["awbno"]
+        if (int(y) == m_id):
+            t.append(p)
+            #print(t)
+            break
+
+    if not m:
+        for i in obj:
+            m.append(i)
+
+    if not t:
+        t.append(p)
+    #print(m)
+    #return HttpResponse("Your movie id is"+str(m_id))
+    return render(request,"movie/appi.html",{"m":m, "t":t[0]["scan"], "count":count})
