@@ -1,0 +1,222 @@
+<!--{% for i in obj %}
+
+{{ i.awbno }}
+<br>
+<br>
+<br>
+{% endfor %}
+
+hejjooo
+-->
+<html xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+{% load static %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  font-size: 10px;
+  margin-left:10%;
+  margin-right:10%;
+  font-family: 'Open Sans', sans-serif;
+}
+table {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 0.5px solid black;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+/*
+.button{
+  background-color: #4074FF;
+  padding:30px;
+  padding-left:37px;
+  padding-right:37px;
+  border-radius:5px;
+  test-decoration:none;
+  color: white;
+  margin:5px;
+  margin-bottom:10%;
+}*/
+
+a:link {
+  text-decoration: none;
+}
+.header-img {
+  width: 50%;
+  height: 200px;
+  background: url("https://i.ibb.co/SV7Kn2L/Screenshot-25.png");
+  background-size: cover;
+}
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+table.a {
+  float: left;
+  width: 300px;
+  margin-top:0px;
+}
+
+tr:hover {
+background-color: #f5f5f5;
+}
+
+table.b {
+  float: right;
+  width: 200px;
+  margin-left:600px;
+  margin-top:0px;
+}
+
+ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  font-size:20px;
+}
+
+li {
+  display: inline;
+  padding:20px;
+  float:right;
+}
+li.left{
+  float:left;
+}
+center{
+margin-top:10%;
+margin-bottom:5%;
+}
+</style>
+</head>
+<body>
+<div id="header">
+  <ul>
+    <li class="left"><img src="{% static 'images/svg/logo.svg' %}" width="50px">Intugine</li>
+    <li><img src="{% static 'images/svg/profile.svg' %}" width="25px"></li>
+    <li>Home</li>
+    <li>Brands</li>
+    <li>Transporters</li>
+  </ul>
+</div>
+<br>
+<br>
+
+<center>
+<a href="{% url 'MyMovie:details' 0 %}" style="background-color: #4074FF;
+  padding:30px;
+  padding-left:37px;
+  padding-right:37px;
+  border-radius:5px;
+  test-decoration:none;
+  color: white;
+  margin:5px;
+  margin-bottom:10%;">DEL&nbsp {{ count }}</a>
+<a href="{% url 'MyMovie:details' 0 %}" style="background-color: #4074FF;
+  padding:30px;
+  padding-left:37px;
+  padding-right:37px;
+  border-radius:5px;
+  test-decoration:none;
+  color: white;
+  margin:5px;
+  margin-bottom:10%;">INT&nbsp {{ count }}</a>
+<a href="{% url 'MyMovie:details' 0 %}" style="background-color: #4074FF;
+  padding:30px;
+  padding-left:37px;
+  padding-right:37px;
+  border-radius:5px;
+  test-decoration:none;
+  color: white;
+  margin:5px;
+  margin-bottom:10%;">OOD&nbsp {{ count }}</a>
+<a href="{% url 'MyMovie:details' 0 %}" style="background-color: #4074FF;
+  padding:30px;
+  padding-left:37px;
+  padding-right:37px;
+  border-radius:5px;
+  test-decoration:none;
+  color: white;
+  margin:5px;
+  margin-bottom:10%;">DEX&nbsp {{ count }}</a>
+<a href="{% url 'MyMovie:details' 0 %}" style="background-color: #4074FF;
+  padding:30px;
+  padding-left:37px;
+  padding-right:37px;
+  border-radius:5px;
+  test-decoration:none;
+  color: white;
+  margin:5px;
+  margin-bottom:10%;">NFI&nbsp {{ count }}</a>
+</center>
+
+<br>
+<br>
+<div class="row">
+  <div class="column">
+<table class="a">
+  <tr>
+    <td><img src="{% static 'images/svg/destination.svg' %}" width="15px"></td>
+  </tr>
+  {% for i in t %}
+  <tr>
+    <th>{{ i.location }}</th>
+    <th>{{ i.time }}</th></tr>
+  {% endfor %}
+  <tr>
+    <td><img src="{% static 'images/svg/warehouse.svg' %}" width="15px"></td>
+  </tr>
+</table>
+      </div>
+  <div class="column">
+<div style="height:450px;overflow:auto;">
+<table class="b">
+  <tr>
+    <th>AWB no</th>
+    <th>tRANSPORTER</th>
+    <th>FROM</th>
+    <th>TO</th>
+    <th>brand</th>
+    <th>pickup date</th>
+    <th>ETD</th>
+    <th>STATUS</th>
+  </tr>
+    {% for i in m %}
+
+  <tr>
+    <td><a href="{% url 'MyMovie:details' i.awbno %}">{{ i.awbno }}</a></td>
+    <td>{{ i.carrier }}</td>
+    <td>{{ i.from }}</td>
+    <td>{{ i.to }}</td>
+    <td>{{ i.carrier }}</td>
+    <td>{{ i.pickup_date }}</td>
+    <td>{{ i.extra_fields.expected_delivery_date }}</td>
+    <td>{{ i.current_status }}</td>
+
+  </tr>
+
+    {% endfor %}
+
+
+
+
+</table>
+</div>  </div>
+</div>
+</body>
+</html>
